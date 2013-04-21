@@ -1,37 +1,16 @@
-Socket = require("../node_modules/noflo/src/lib/InternalSocket")
+test = require "noflo-test"
 
-setup = (component, inNames=[], outNames=[]) ->
-  c = require("../components/#{component}").getComponent()
-  inPorts = []
-  outPorts = []
+input =
+  a: 1
+  b:
+    c: 2
+    d: [3, 4]
 
-  for name in inNames
-    port = Socket.createSocket()
-    c.inPorts[name].attach(port)
-    inPorts.push(port)
+test.component("swiss-knife/Values").
+  discuss("given any object").
+    send.data("in", input).
+    send.disconnect("in").
+  discuss("get the top-level values as an array").
+    receive.data("out", [1, { c: 2, d: [3, 4] }]).
 
-  for name in outNames
-    port = Socket.createSocket()
-    c.outPorts[name].attach(port)
-    outPorts.push(port)
-
-  [c, inPorts, outPorts]
-
-exports["gets only the values of an object and forward them as an array"] = (test) ->
-  [c, [ins], [out]] = setup("Values", ["in"], ["out"])
-
-  test.expect(1)
-
-  input =
-    a: 1
-    b:
-      c: 2
-      d: [3, 4]
-  expected = [1, { c: 2, d: [3, 4] }]
-
-  out.on "data", (data) ->
-    test.deepEqual(data, expected)
-    test.done()
-
-  ins.send(input)
-  ins.disconnect()
+export module

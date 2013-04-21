@@ -1,42 +1,47 @@
-{
-  "name": "noflo-swiss-knife",
-  "description": "Swiss Army knife for NoFlo programming",
-  "keywords": ["noflo", "underscorejs", "utility"],
-  "author": "Kenneth Kan <kenhkan@gmail.com>",
-  "version": "0.0.1",
-  "licenses": [{
-    "type": "MIT",
-    "url": "https://github.com/kenhkan/noflo-swiss-knife/blob/master/LICENSE.md"
-  }],
-  "engines": {
-    "node": ">=0.6.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/kenhkan/noflo-swiss-knife"
-  },
-  "dependencies": {
-    "noflo": "0.3.x",
-    "underscore": "1.4.x",
-    "owl-deepcopy": "0.0.x"
-  },
-  "devDependencies": {
-    "nodeunit": ">=0.6.0",
-    "coffeelint": "*",
-    "coffee-script": "1.4.x"
-  },
-  "noflo": {
-    "components": {
-      "Clone": "./components/Clone.coffee",
-      "Compact": "./components/Compact.coffee",
-      "Copy": "./components/Copy.coffee",
-      "Flatten": "./components/Flatten.coffee",
-      "Keys": "./components/Keys.coffee",
-      "Values": "./components/Values.coffee"
+{ "name": "noflo-swiss-knife"
+, "description": "Swiss Army knife for NoFlo programming"
+, "keywords":
+  [ "noflo"
+  , "underscorejs"
+  , "utility"
+  ]
+, "author": "Kenneth Kan <kenhkan@gmail.com>"
+, "version": "0.0.1"
+, "licenses":
+  [ { "type": "MIT"
+    , "url": "https://github.com/kenhkan/noflo-swiss-knife/blob/master/LICENSE.md"
     }
-  },
-  "scripts": {
-    "pretest": "./node_modules/.bin/coffeelint -r components",
-    "test": "./node_modules/.bin/nodeunit test"
+  ]
+, "engines":
+  { "node": ">=0.6.0"
+  }
+, "repository":
+  { "type": "git"
+  , "url": "git://github.com/kenhkan/noflo-swiss-knife"
+  }
+, "dependencies":
+  { "noflo": "0.3.x"
+  , "underscore": "1.4.x"
+  , "underscore.string": "2.3.x"
+  , "owl-deepcopy": "0.0.x"
+  }
+, "devDependencies":
+  { "coffeelint": "*"
+  , "coffee-script": "1.4.x"
+  , "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/develop"
+  }
+, "noflo":
+  { "components":
+    { "Clone": "./components/Clone.coffee"
+    , "Compact": "./components/Compact.coffee"
+    , "Copy": "./components/Copy.coffee"
+    , "Flatten": "./components/Flatten.coffee"
+    , "Keys": "./components/Keys.coffee"
+    , "Values": "./components/Values.coffee"
+    }
+  }
+, "scripts":
+  { "pretest": "./node_modules/.bin/coffeelint -r components"
+  , "test": "./node_modules/.bin/noflo-test --spec test/*.coffee"
   }
 }
