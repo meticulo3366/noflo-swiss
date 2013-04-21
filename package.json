@@ -6,7 +6,7 @@
   "version": "0.0.1",
   "licenses": [{
     "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
+    "url": "https://github.com/kenhkan/noflo-swiss-knife/blob/master/LICENSE.md"
   }],
   "engines": {
     "node": ">=0.6.0"
