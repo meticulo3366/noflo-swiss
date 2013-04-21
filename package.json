@@ -38,6 +38,7 @@
     , "Flatten": "./components/Flatten.coffee"
     , "Keys": "./components/Keys.coffee"
     , "Values": "./components/Values.coffee"
+    , "Quit": "./components/Quit.coffee"
     }
   }
 , "scripts":
