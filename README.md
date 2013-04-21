@@ -1,4 +1,4 @@
-Utility NoFlo Components [![Build Status](https://secure.travis-ci.org/kenhkan/noflo-swiss-knife.png?branch=master)](https://travis-ci.org/kenhkan/noflo-swiss-knife)
+Utility NoFlo Components [![Build Status](https://secure.travis-ci.org/kenhkan/noflo-swiss.png?branch=master)](https://travis-ci.org/kenhkan/noflo-swiss)
 ===============================
 
 This module provides useful utilities for your everyday needs

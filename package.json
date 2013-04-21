@@ -1,4 +1,4 @@
-{ "name": "noflo-swiss-knife"
+{ "name": "noflo-swiss"
 , "description": "Swiss Army knife for NoFlo programming"
 , "keywords":
   [ "noflo"
@@ -6,10 +6,10 @@
   , "utility"
   ]
 , "author": "Kenneth Kan <kenhkan@gmail.com>"
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "licenses":
   [ { "type": "MIT"
-    , "url": "https://github.com/kenhkan/noflo-swiss-knife/blob/master/LICENSE.md"
+    , "url": "https://github.com/kenhkan/noflo-swiss/blob/master/LICENSE.md"
     }
   ]
 , "engines":
@@ -17,7 +17,7 @@
   }
 , "repository":
   { "type": "git"
-  , "url": "git://github.com/kenhkan/noflo-swiss-knife"
+  , "url": "git://github.com/kenhkan/noflo-swiss"
   }
 , "dependencies":
   { "noflo": "0.3.x"
