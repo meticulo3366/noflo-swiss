@@ -15,10 +15,7 @@ class Compact extends noflo.Component
       @outPorts.out.beginGroup(group)
 
     @inPorts.in.on "data", (data) =>
-      if _.isArray(data)
-        @outPorts.out.send(_.compact(data))
-      else
-        @outPorts.out.send(data)
+      @outPorts.out.send(_.compact(data))
 
     @inPorts.in.on "endgroup", (group) =>
       @outPorts.out.endGroup()
