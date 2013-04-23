@@ -6,7 +6,7 @@
   , "utility"
   ]
 , "author": "Kenneth Kan <kenhkan@gmail.com>"
-, "version": "0.0.3"
+, "version": "0.0.4"
 , "licenses":
   [ { "type": "MIT"
     , "url": "https://github.com/kenhkan/noflo-swiss/blob/master/LICENSE.md"
@@ -24,6 +24,7 @@
   , "underscore": "1.4.x"
   , "underscore.string": "2.3.x"
   , "owl-deepcopy": "0.0.x"
+  , "node-uuid": "1.4.x"
   }
 , "devDependencies":
   { "coffeelint": "*"
@@ -37,6 +38,7 @@
     , "Copy": "./components/Copy.coffee"
     , "Flatten": "./components/Flatten.coffee"
     , "Quit": "./components/Quit.coffee"
+    , "UUID": "./components/UUID.coffee"
     }
   }
 , "scripts":
