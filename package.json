@@ -1,12 +1,12 @@
 { "name": "noflo-swiss"
-, "description": "Swiss Army knife for NoFlo programming"
+, "description": "Swiss Army Knife for NoFlo Programming"
 , "keywords":
   [ "noflo"
   , "underscorejs"
   , "utility"
   ]
 , "author": "Kenneth Kan <kenhkan@gmail.com>"
-, "version": "0.0.4"
+, "version": "0.0.5"
 , "licenses":
   [ { "type": "MIT"
     , "url": "https://github.com/kenhkan/noflo-swiss/blob/master/LICENSE.md"
@@ -29,7 +29,7 @@
 , "devDependencies":
   { "coffeelint": "*"
   , "coffee-script": "1.4.x"
-  , "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/develop"
+  , "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/master"
   }
 , "noflo":
   { "components":
