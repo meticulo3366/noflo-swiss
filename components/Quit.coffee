@@ -7,7 +7,8 @@ class Quit extends noflo.Component
   constructor: ->
     @inPorts =
       in: new noflo.Port
-    @outPorts = {}
+    @outPorts =
+      out: new noflo.Port
 
     @inPorts.in.on "disconnect", =>
       process.exit()
