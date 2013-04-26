@@ -11,6 +11,7 @@ class Quit extends noflo.Component
       out: new noflo.Port
 
     @inPorts.in.on "disconnect", =>
+      console.log("'Quit' is quitting the process.")
       process.exit()
 
 exports.getComponent = -> new Quit
