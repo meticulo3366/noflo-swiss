@@ -39,11 +39,9 @@
     , "Copy": "./components/Copy.coffee"
     , "Flatten": "./components/Flatten.coffee"
     , "Quit": "./components/Quit.coffee"
-    , "UUID": "./components/UUID.coffee"
+    , "RandomUuid": "./components/RandomUuid.coffee"
     , "Zip": "./components/Zip.coffee"
-    }
-  , "graphs":
-    { "String2Array": "./graphs/String2Array.fbp"
+    , "Trash": "./components/Trash.coffee"
     }
   }
 , "scripts":

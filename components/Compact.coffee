@@ -3,7 +3,7 @@ _ = require("underscore")
 
 class Compact extends noflo.Component
 
-  description: "compacts incoming arrays to remove `null`-equivalent values"
+  description: "Remove null"
 
   constructor: ->
     @inPorts =
@@ -15,7 +15,11 @@ class Compact extends noflo.Component
       @outPorts.out.beginGroup(group)
 
     @inPorts.in.on "data", (data) =>
-      @outPorts.out.send(_.compact(data))
+      return unless data?
+      return if data.length is 0
+      return if _.isObject(data) and _.isEmpty(data)
+
+      @outPorts.out.send(data)
 
     @inPorts.in.on "endgroup", (group) =>
       @outPorts.out.endGroup()

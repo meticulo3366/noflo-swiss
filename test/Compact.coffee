@@ -1,24 +1,18 @@
 test = require "noflo-test"
 
 test.component("swiss/Compact").
-  discuss("given any array").
-    send.data("in", [1, 2, null]).
+  discuss("given some packets").
+    send.data("in", []).
+    send.data("in", 1).
+    send.data("in", "").
+    send.data("in", 2).
+    send.data("in", null).
+    send.data("in", false).
+    send.data("in", {}).
     send.disconnect("in").
   discuss("get a clean version of that").
-    receive.data("out", [1, 2]).
-
-  next().
-  discuss("given any object").
-    send.data("in", { a: 1, b: null }).
-    send.disconnect("in").
-  discuss("get a clean version of the values as an array").
-    receive.data("out", [1]).
-
-  next().
-  discuss("given a primitive").
-    send.data("in", true).
-    send.disconnect("in").
-  discuss("get an empty array").
-    receive.data("out", []).
+    receive.data("out", 1).
+    receive.data("out", 2).
+    receive.data("out", false).
 
 export module
