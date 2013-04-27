@@ -8,31 +8,36 @@ class Underscore extends noflo.Component
   function name"
 
   constructor: ->
+    @stream = true
+
     @inPorts =
       in: new noflo.Port
+      stream: new noflo.Port
       name: new noflo.Port
     @outPorts =
       out: new noflo.Port
 
+    @inPorts.stream.on "data", (stream) =>
+      @stream = stream is "true"
+
     @inPorts.name.on "data", (@name) =>
 
-    @inPorts.in.on "begingroup", (group) =>
-      @outPorts.out.beginGroup(group)
+    @inPorts.in.on "connect", =>
+      @packets = []
 
     @inPorts.in.on "data", (data) =>
-      console.log "* DDD"
-      console.log @name
-      console.log data
-      console.log _[@name] data
-      if @name?
-        @outPorts.out.send _[@name] data
+      if @stream
+        if @name?
+          @outPorts.out.send _[@name] data
+        else
+          @outPorts.out.send data
       else
-        @outPorts.out.send data
-
-    @inPorts.in.on "endgroup", =>
-      @outPorts.out.endGroup()
+        @packets.push(data)
 
     @inPorts.in.on "disconnect", =>
+      unless @stream
+        @outPorts.out.send _[@name].apply _, @packets
+
       @outPorts.out.disconnect()
 
 exports.getComponent = -> new Underscore
