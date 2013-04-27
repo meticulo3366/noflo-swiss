@@ -31,7 +31,6 @@
   { "coffeelint": "*"
   , "coffee-script": "1.4.x"
   , "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/master"
-  , "nodeunit": ">=0.6.0"
   }
 , "noflo":
   { "components":
@@ -43,15 +42,13 @@
     , "RandomUuid": "./components/RandomUuid.coffee"
     , "Zip": "./components/Zip.coffee"
     , "Trash": "./components/Trash.coffee"
+    , "Hub": "./components/Hub.coffee"
     , "Underscore": "./components/Underscore.coffee"
     , "ErrorOnDisconnect": "./components/ErrorOnDisconnect.coffee"
-    }
-  , "graphs":
-    { "HashToObject": "./graphs/HashToObject.fbp"
     }
   }
 , "scripts":
   { "pretest": "./node_modules/.bin/coffeelint -r components"
-  , "test": "./node_modules/.bin/noflo-test --spec test/*.coffee; ./node_modules/.bin/nodeunit test/nodeunit/*.coffee"
+  , "test": "./node_modules/.bin/noflo-test --spec test/*.coffee"
   }
 }
