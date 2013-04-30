@@ -36,13 +36,10 @@
   { "components":
     { "Compact": "./components/Compact.coffee"
     , "DeepCopy": "./components/DeepCopy.coffee"
-    , "Quit": "./components/Quit.coffee"
     , "RandomUuid": "./components/RandomUuid.coffee"
     , "Zip": "./components/Zip.coffee"
-    , "Trash": "./components/Trash.coffee"
     , "Hub": "./components/Hub.coffee"
     , "Underscore": "./components/Underscore.coffee"
-    , "ErrorOnDisconnect": "./components/ErrorOnDisconnect.coffee"
     }
   }
 , "scripts":
