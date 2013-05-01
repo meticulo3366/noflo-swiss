@@ -34,10 +34,8 @@
   }
 , "noflo":
   { "components":
-    { "Compact": "./components/Compact.coffee"
-    , "DeepCopy": "./components/DeepCopy.coffee"
+    { "DeepCopy": "./components/DeepCopy.coffee"
     , "RandomUuid": "./components/RandomUuid.coffee"
-    , "Zip": "./components/Zip.coffee"
     , "Hub": "./components/Hub.coffee"
     , "Underscore": "./components/Underscore.coffee"
     }
