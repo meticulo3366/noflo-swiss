@@ -25,7 +25,6 @@
   , "underscore.string": "2.3.x"
   , "owl-deepcopy": "0.0.x"
   , "node-uuid": "1.4.x"
-  , "noflo-packets": "0.0.x"
   }
 , "devDependencies":
   { "coffeelint": "*"
