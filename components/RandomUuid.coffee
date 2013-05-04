@@ -11,11 +11,9 @@ class RandomUuid extends noflo.Component
     @outPorts =
       out: new noflo.Port
 
-    @inPorts.in.on "data", (data) =>
+    @inPorts.in.on "disconnect", =>
       token = uuid.v4()
       @outPorts.out.send(token)
-
-    @inPorts.in.on "disconnect", =>
       @outPorts.out.disconnect()
 
 exports.getComponent = -> new RandomUuid
