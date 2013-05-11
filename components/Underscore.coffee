@@ -25,6 +25,9 @@ class Underscore extends noflo.Component
     @inPorts.in.on "connect", =>
       @packets = []
 
+    @inPorts.in.on "begingroup", (group) =>
+      @outPorts.out.beginGroup group
+
     @inPorts.in.on "data", (data) =>
       if @stream
         if @name?
@@ -33,6 +36,9 @@ class Underscore extends noflo.Component
           @outPorts.out.send data
       else
         @packets.push(data)
+
+    @inPorts.in.on "endgroup", (group) =>
+      @outPorts.out.endGroup()
 
     @inPorts.in.on "disconnect", =>
       unless @stream
