@@ -52,9 +52,5 @@
       "Hub": "./components/Hub.coffee",
       "Underscore": "./components/Underscore.coffee"
     }
-  },
-  "scripts": {
-    "pretest": "./node_modules/.bin/coffeelint -r components",
-    "test": "./node_modules/.bin/noflo-test --spec test/*.coffee"
   }
 }
