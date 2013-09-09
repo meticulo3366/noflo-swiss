@@ -1,16 +1,18 @@
-{
-  "name": "-swiss",
-  "description": "The best project ever.",
-  "author": "Kenneth Kan <kenhkan@gmail.com>",
+{ "name": "noflo-swiss"
+  , "description": "Swiss Army Knife for NoFlo Programming"
+  , "keywords":
+    [ "noflo"
+    , "underscorejs"
+    , "utility"
+    ]
+  , "author": "Kenneth Kan <kenhkan@gmail.com>"
+  , "version": "0.0.7",
+
   "repo": "kenhkan/noflo-swiss",
-  "version": "0.1.0",
-  "keywords": [
-  ],
   "dependencies": {
     "noflo/noflo": "*"
   },
   "scripts": [
-    "components/DoSomething.coffee",
     "index.js"
   ],
   "json": [
@@ -18,7 +20,6 @@
   ],
   "noflo": {
     "components": {
-      "DoSomething": "components/DoSomething.coffee"
     }
   }
 }
