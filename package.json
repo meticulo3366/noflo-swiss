@@ -52,5 +52,8 @@
       "Hub": "./components/Hub.coffee",
       "Underscore": "./components/Underscore.coffee"
     }
+  },
+  "scripts": {
+    "test": "grunt test"
   }
 }
