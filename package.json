@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kenhkan/noflo-swiss"
+    "url": "https://github.com/kenhkan/noflo-swiss"
   },
   "dependencies": {
     "noflo": "~0.4.0",
