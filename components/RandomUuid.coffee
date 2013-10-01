@@ -1,9 +1,9 @@
-noflo = require("noflo")
-uuid = require("node-uuid")
+noflo = require('noflo')
+uuid = require('node-uuid')
 
 class RandomUuid extends noflo.Component
 
-  description: "Generate a random UUID token"
+  description: 'Generate a random UUID token'
 
   constructor: ->
     @inPorts =
@@ -11,9 +11,14 @@ class RandomUuid extends noflo.Component
     @outPorts =
       out: new noflo.Port
 
-    @inPorts.in.on "disconnect", =>
-      token = uuid.v4()
-      @outPorts.out.send(token)
+    @inPorts.in.on 'begingroup', (group) =>
+      @outPorts.out.beginGroup group
+    @inPorts.in.on 'endgroup', =>
+      @outPorts.out.endGroup()
+    @inPorts.in.on 'disconnect', =>
       @outPorts.out.disconnect()
+
+    @inPorts.in.on 'data', =>
+      @outPorts.out.send uuid.v4()
 
 exports.getComponent = -> new RandomUuid
