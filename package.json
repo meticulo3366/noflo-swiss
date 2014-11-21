@@ -22,12 +22,12 @@
     "url": "https://github.com/kenhkan/noflo-swiss"
   },
   "dependencies": {
-    "noflo": "~0.4.0",
-    "underscore": "1.4.x",
-    "underscore.string": "2.3.x",
-    "owl-deepcopy": "0.0.x",
-    "node-uuid": "1.4.x",
-    "noflo-test": "~0.0.6"
+    "noflo": "~0.5.x",
+    "underscore": "1.x.x",
+    "underscore.string": "2.x.x",
+    "owl-deepcopy": "0.x.x",
+    "node-uuid": "1.x.x",
+    "noflo-test": "~0.x.x"
   },
   "devDependencies": {
     "grunt-exec": "~0.4.2",
